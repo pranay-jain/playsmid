@@ -15,7 +15,7 @@
 	"genes": [
 		{
 			"gene": "red",
-			"isOn": 0				// 0 is inactive. 1 is on. -1 is off.
+			"isOn": 0
 		},
 		{
 			"gene": "blue",
@@ -62,15 +62,3 @@
 		}
 	]
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 var express = require('express'),
 	app		= express(),
 
-	MongoClient = require('mongoose'), 
+	MongoClient = require('mongoose'),
 	assert = require('assert');
 
 
@@ -11,15 +11,6 @@ app.set('view engine', 'hbs');
 
 app.disable('etag');
 
-app.get('/', (req, res) => {
-	res.render('index');
-});
-
-app.get('/play', (req, res) => {
-	res.render('play');
-});
-
-
 var dbuser = "main",
 	dbpass = "rouse";
 
@@ -27,6 +18,16 @@ var dburl = "mongodb://" + dbuser + ":" + dbpass + "@ds059306.mlab.com:59306/pla
 
 MongoClient.connect(dburl);
 
+var db = MongoClient.db("playsmid");
 
+app.get('/', (req, res) => {
+	res.render('index');
+});
+
+app.get('/play', (req, res) => {
+	var cursor = db.collection('data').find({'level':0});
+	var level = cursor[0];
+	res.render('play');
+});
 
 app.listen(8080);

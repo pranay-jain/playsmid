@@ -402,3 +402,31 @@ button:focus
 	left: 648px;
 	top: 113px;
 }
+
+.bottomPromoSlot
+{
+	position: absolute;
+	left: 725px;
+	top: 218px;
+}
+
+.topPromoSlot
+{
+	position: absolute;
+	left: 712px;
+	top: 32px;
+}
+
+.rightPromoSlot
+{
+	position: absolute;
+	left: 819px;
+	top: 113px;
+}
+
+.leftPromoSlot
+{
+	position: absolute;
+	left: 630px;
+	top: 126px;
+}

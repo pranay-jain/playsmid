@@ -27,21 +27,19 @@ app.get('/play', (req, res) => {
 	var cursor = db.collection('data').find({'level': 0});
 	var level;
 	cursor.toArray(function(err, items) {
-		console.log(items[0]);
-		res.render('play', {'level': items[0], 'string': "hello world"});
+		res.render('play', {'level_string': JSON.stringify(items[0]), 'level': items[0]});
 	});
-	
+
 });
 
 app.get('/play/:lvl', (req, res) => {
 	var level = parseInt(req.params.lvl);
 	console.log(level);
-	var cursor = db.collection('data').find({'level': 0});
+	var cursor = db.collection('data').find({'level': level});
 	cursor.toArray(function(err, items) {
 		console.log(items[0]);
-		res.render('play', {'level': items[0], 'string': "hello world"});
+		res.render('play', {'level_string': JSON.stringify(items[0]), 'level': items[0]});
 	});
-	
 });
 
 app.listen(8080);

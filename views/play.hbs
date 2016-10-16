@@ -1,9 +1,13 @@
 <html>
 	<head>
 		<title>Level 1</title>
-		<link 	rel="stylesheet" type="text/css" href="style.css">
+		<link 	rel="stylesheet" type="text/css" href="/style.css">
 		<link 	href="https://fonts.googleapis.com/css?family=Raleway:400,700,800" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+		<script>
+			var level = JSON.parse("{{level_string}}".replace(/\r?\n|\r/g,"").replace(/&quot;/g,'"').replace(/&lt;br&gt/g, '<br>'));
+			console.log(level);
+		</script>
 		<script type="text/javascript" src="/script.js"></script>
 	</head>
 	<body>
@@ -71,13 +75,14 @@
 					<div class="geneTool">
 						<p>{{level.markers.2.name}}</p>
 					</div>
+
 					<div class="markerTool">
 						<p>{{level.genes.0.gene}}</p>
 					</div>
-					<div class="markerTool">
+					<div class="markerTool" id="blue">
 						<p>{{level.genes.1.gene}}</p>
 					</div>
-					<div class="markerTool">
+					<div class="markerTool" id="yellow">
 						<p>{{level.genes.2.gene}}</p>
 					</div>
 					<div>

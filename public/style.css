@@ -56,7 +56,8 @@ h1
 	color: #fff;
 	position: absolute;
 	top: 50%;
-	width: 100%;
+	width: 70%;
+	left: 15%;
 	margin: auto;
 	text-align: center;
 	cursor: pointer;
@@ -79,6 +80,17 @@ h1
 	height: 100%;
 	position: absolute;
 	right:100px;
+
+#particles-js h3 
+{
+	font-size: 0.8em;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	position: absolute;
+	top: 70%;
+	width: 100%;
+	margin: auto;
+	text-align: center;
 }
 
 a
@@ -88,16 +100,16 @@ a
 }
 
 a:hover {
-	-webkit-transform: scale(0.9);
+	transform: scale(0.5);
 }
 
 .petri
 {
-	width: 300px;
-	height: 300px;
+	width: 350px;
+	height: 350px;
 	position: absolute;
 	left: 50px;
-	top: 143px;
+	top: 120px;
 }
 
 .petri img 
@@ -244,6 +256,8 @@ footer
 	color: #fff;
 	text-align: center;
 	cursor: pointer;
+	border-bottom: 4px solid #cecece;
+	border-right: 4px solid #cecece;
 }
 
 .geneTool p
@@ -263,14 +277,23 @@ footer
 	height: 30px;
 	position: relative;
 	left: 4%;
-	background: #1a1a1a;
-	//border: 3px solid #73AD21;
+	background: #e74c3c;
 	display: inline-block;
 	padding-left: 0px;
 	padding-right: 20px;
 	color: #fff;
 	text-align: center;
 	cursor: pointer;
+	border-bottom: 4px solid #cecece;
+	border-right: 4px solid #cecece;
+}
+
+#blue {
+	background: #3498db;
+}
+
+#yellow {
+	background: #f39c12;
 }
 
 .markerTool p
@@ -288,6 +311,7 @@ h2
 	font-size: 1em;
 	font-weight: 800;
 	margin-left: 2%;
+	margin-top: -0px;
 }
 
 p
@@ -301,19 +325,19 @@ p
 
 button 
 {
-	top:20px;
-	height: 30px;
-	width: 70px;
+	top:15px;
+	height: 40px;
+	width: 100px;
 	background: #111;
 	position: relative;
 	display: inline-block;
 	position: relative;
-	left: 4%;
-	padding-left: 0px;
-	padding-right: 10px;
-	color: #fff;
-	text-align: center;
+	left: 50%;
+	padding-right: 15px;
 	cursor: pointer;
+	border: none;
+	border-bottom: 4px solid #666;
+	-webkit-transition: all .5s;
 }
 
 button p
@@ -321,8 +345,15 @@ button p
 	color: #fff;
 	height: 100%;
 	width: 100%;
+	font-size: 1em;
+	text-transform: uppercase;
 	text-align: center;
 	cursor: pointer;
+}
+
+button:hover 
+{
+	border-bottom: 4px solid #111;
 }
 
 .smear

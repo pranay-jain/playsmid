@@ -73,7 +73,7 @@ $(document).ready(function () {
 					if(level.cases[i].isCorrect) {
 						$('#smear').attr("src", level.cases[i].output);
 						console.log(level.cases[i].output);
-						alert("That's the correct answer!");
+						alert(level.successText);
 						correct = true;
 					}
 				}

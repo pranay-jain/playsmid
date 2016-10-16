@@ -16,7 +16,9 @@ app.get('/', (req, res) => {
 	res.render('index');
 });
 
-
+app.get('/play', (req, res) => {
+	res.render('play');
+});
 
 
 var dbuser = "main",

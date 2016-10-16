@@ -187,7 +187,7 @@
                     "BleoMX"
                 ],
                 "inputPromoter": null,
-                "output": "red",
+                "output": "/SVGs/Art/Smear1Red.svg",
                 "isCorrect": true
             },
             {
@@ -198,13 +198,13 @@
                     "BleoMX"
                 ],
                 "inputPromoter": null,
-                "output": "yellow",
+                "output": "/SVGs/Art/Smear1Yellow.svg",
                 "isCorrect": false
             }
         ],
         "instructions": "What happened?? You can see that the yeast turned a splotchy mix of tan and red. This is because transformation is NOT 100% successful. To get a plate of pure red yeast, you need a method of selection. Markers were just added to your toolbox (KanMX, NatMX, BleoMX). These three markers confer resistant to three different antibiotics (chemicals that kill cells). For example, yeast with the KanMX gene will be able to survive even if their plate had the deadly kanamycin in it. If you put a marker in your plasmid with your gene, then only the cells that were transformed will be able to survive if you put its respective antibiotic on the plate. Try putting a marker on your plasmid with the red gene. "
     }, {
-        "level": 1,
+        "level": 2,
         "cellName": "Yeast",
         "initialColor": "white",
         "markers": [

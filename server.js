@@ -29,10 +29,10 @@ app.get('/play', (req, res) => {
 
 app.get('/play/:lvl', (req, res) => {
 	var level = parseInt(req.params.lvl);
-	console.log(level);
+	//console.log(level);
 	var cursor = db.collection('data').find({'level': level});
 	cursor.toArray(function(err, items) {
-		console.log(items[0]);
+		//console.log(items[0]);
 		res.render('play', {'level_string': JSON.stringify(items[0]), 'level': items[0]});
 	});
 });

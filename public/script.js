@@ -68,9 +68,9 @@ $(document).ready(function () {
 				promoter = promoters[0];
 			}
 			for (var i = level.cases.length - 1; i >= 0; i--) {
-				var case = level.cases[i];
-				if(gene === case.inputGene && (case.inputMarker === marker ||
-					case.indexOf(markers[0]) > -1) && case.inputPromoter === promoter) {
+				var currCase = level.cases[i];
+				if(gene === currCase.inputGene && (currCase.inputMarker === marker ||
+					currCase.indexOf(markers[0]) > -1) && currCase.inputPromoter === promoter) {
 					if(level.cases[i].isCorrect) {
 						$('#smear').attr("src", level.cases[i].output);
 						console.log(level.cases[i].output);
@@ -96,4 +96,3 @@ $('#next').click(function (){
 		window.location.replace("/play/" + parseInt(level.level+1));
 	//}
 });
-

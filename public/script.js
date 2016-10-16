@@ -40,10 +40,11 @@ $(document).ready(function () {
 
 	});
 
+
 	$('#transform').click(function () {
-		if (level.level < 5) {
+		if (level.level < 1) {
 			for (var i = level.cases.length - 1; i >= 0; i--) {
-				if(genes[0] == level.cases[i].input) { // && marker == cases[i].inputMarker
+				if(genes[0] == level.cases[i].input) {
 					if(level.cases[i].isCorrect) {
 						$('#smear').attr("src", level.cases[i].output);
 						console.log(level.cases[i].output);
@@ -52,6 +53,35 @@ $(document).ready(function () {
 					}
 				}
 			}
+		} else if (level.level < 3) {
+			var gene = genes[0];
+			var marker;
+			if (markers.length === 0) {
+				marker = null;
+			} else {
+				marker = markers[0];
+			}
+			var promoter;
+			if (promoters.length === 0) {
+				promoter = null;
+			} else {
+				promoter = promoters[0];
+			}
+			for (var i = level.cases.length - 1; i >= 0; i--) {
+				var case = level.cases[i];
+				if(gene === case.inputGene && (case.inputMarker === marker ||
+					case.indexOf(markers[0]) > -1) && case.inputPromoter === promoter) {
+					if(level.cases[i].isCorrect) {
+						$('#smear').attr("src", level.cases[i].output);
+						console.log(level.cases[i].output);
+						alert("That's the correct answer!");
+						correct = true;
+					}
+				}
+			}
+		} else if (level.level < 5) {
+			// Logic for Puzzles 3 and 4
+
 		} else if (level.level < 6) {
 			// Lead Inducible Gene Puzzle (ensure that this logic is encoded in the db)
 

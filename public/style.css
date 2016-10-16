@@ -68,18 +68,18 @@ h1
 .logo
 {
 	position: absolute;
-	width: 200px;
-	height: 200px;
+	width: 75px;
+	height: 75px;
 	top: 3%;
 	left: 50%;
 }
 
 .logo img
 {
+	position: absolute;
 	width: 100%;
 	height: 100%;
-	position: absolute;
-	right:100px;
+	right: 37.5px;
 }
 
 #particles-js h3 
@@ -368,3 +368,37 @@ button:focus
 	top: 208px;
 }
 
+.plasmid
+{
+	position: absolute;
+	left: 650px;
+	top: 50px;
+}
+
+.bottomSlot
+{
+	position: absolute;
+	left: 712px;
+	top: 200px;
+}
+
+.topSlot
+{
+	position: absolute;
+	left: 712px;
+	top: 49px;
+}
+
+.rightSlot
+{
+	position: absolute;
+	left: 801px;
+	top: 113px;
+}
+
+.leftSlot
+{
+	position: absolute;
+	left: 648px;
+	top: 113px;
+}

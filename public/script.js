@@ -3,11 +3,13 @@ $(document).ready(function () {
 	var genes = [];
 	var promoters = [];
 	var correct;
+	var plasmidEntries = [];
 
 	$('.geneTool, .markerTool').click(function () {
 		$(this).css("opacity", 0.7);
 	});
 
+	// Plasmid image reposition
 
 	$('.geneTool p').click(function () {
 		var marker = $(this).html(); //shouldn't this be gene = ? mixed up
@@ -16,7 +18,9 @@ $(document).ready(function () {
 		} else {
 			markers.push(marker);
 		}
-		//console.log(marker);
+
+		plasmidEntries.push(marker);
+		
 	});
 
 	$('.promoTool p').click(function () {
@@ -26,6 +30,7 @@ $(document).ready(function () {
 		} else {
 			promoters.push(promoter);
 		}
+		plasmidEntries.push(marker);
 		//console.log(promoter);
 	});
 
@@ -36,6 +41,7 @@ $(document).ready(function () {
 		} else {
 			genes.push(gene);
 		}
+		plasmidEntries.push(marker);
 		//console.log(gene);
 
 	});
@@ -100,4 +106,32 @@ $(document).ready(function () {
 			alert("complete this level first!");
 		}
 	});
+
+
+
+	// Place plasmid images
+
+	var imgsrc = {
+		"red": "",
+		"blue": "",
+		"yellow": "",
+		"KanMX": "",
+		"BleoMX": "",
+		"NatMX": ""
+	};
+
+
+
+	for (var i = plasmidEntries.length - 1; i >= 0; i--) {
+		if (i%4===0)
+			$('.bottomSlot').attr("src", plasmidEntries[i]);
+		else if (i%4===1)
+			$('.topSlot').attr("src", plasmidEntries[i]);
+		else if (i%4===2)
+			$('.leftSlot').attr("src", plasmidEntries[i]);
+		else
+			$('.rightSlot').attr("src", plasmidEntries[i]);
+	}
+
+
 });

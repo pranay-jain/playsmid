@@ -20,7 +20,8 @@ h1
 	color: #fff;
 	position: absolute;
 	top: 30%;
-	left: 40%;
+	width: 100%;
+	margin: auto;
 }
 
 #particles-js 
@@ -33,6 +34,31 @@ h1
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
+}
+
+#particles-js  p
+{
+	font-size: 0.8em;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	cursor: pointer;
+	font-weight: 800;
+	//text-decoration:underline;
+}
+
+a
+{
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	-webkit-transform: scale(0.9);
 }
 
 .petri
@@ -240,7 +266,6 @@ p
 	color: #aaa;
 	font-size: 0.6em;
 	font-weight: 800;
-	//text-align: center;
 	font-kerning: auto;
 }
 
@@ -259,7 +284,6 @@ button
 	color: #fff;
 	text-align: center;
 	cursor: pointer;
->>>>>>> 67d5036c110aedf5206e95c5790c8944d625530b
 }
 
 button p

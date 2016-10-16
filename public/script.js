@@ -3,12 +3,15 @@ $(document).ready(function () {
 	var gene;
 	var promoter;
 
-	var markerButton = $('.geneTool p');
+	$('.geneTool').click(function () {
+		$(this).css("opacity", 0.7);
+	});
 
-
+	
 	$('.geneTool p').click(function () {
 		marker = $(this).html(); //shouldn't this be gene = ? mixed up
 		console.log(marker); 
+	});
 
 	$('.promoTool p').click(function () {
 		promoter = $(this).html();
@@ -22,16 +25,16 @@ $(document).ready(function () {
 	});
 
 	$('button').click(function () {
-		for (var i = cases.length - 1; i >= 0; i--) {
-			if(gene == cases[i].input) { // && marker == cases[i].inputMarker
-				if(cases[i].isCorrect) {
+		for (var i = casesZero.length - 1; i >= 0; i--) {
+			if(gene == casesZero[i].input) { // && marker == cases[i].inputMarker
+				if(casesZero[i].isCorrect) {
 					console.log("Correct!");
 				}
 			}
 		}
 	});
 
-	var cases = [
+	var casesZero = [
 			{
 				"input": "red", //change to inputGene? or just gene? and Add inputMarker variable to check
 				"output": "red/wild",
@@ -47,11 +50,4 @@ $(document).ready(function () {
 				"output": "blue/wild",
 				"isCorrect": false
 			}];
-
-
-
-
-
-
-
 });

@@ -19,7 +19,7 @@ h1
 	text-align: center;
 	color: #fff;
 	position: absolute;
-	top: 45%;
+	top: 33%;
 	width: 100%;
 	margin: auto;
 }
@@ -28,11 +28,11 @@ h1
 {
 	font-family: 'Bungee Inline', cursive;
 	font-kerning: auto;
-	font-size: 1 em;
+	font-size: 2em;
 	text-align: center;
 	color: #fff;
 	position: absolute;
-	top: 60%;
+	top: 65%;
 	width: 100%;
 	margin: auto;
 }
@@ -363,7 +363,7 @@ button:focus
 .smear
 {
 	position: absolute;
-	left: 123px;
-	top: 210px;
+	left: 140px;
+	top: 208px;
 }
 

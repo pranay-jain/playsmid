@@ -272,25 +272,25 @@
                     "inputGene": "yellow",
                     "inputMarker" : ["KanMX", "BleoMX"],
                     "inputPromoter" : null,
-                    "output": "yellow",
+                    "output": "/SVGs/Art/Smear1Yellow.svg",
                     "isCorrect": true
                 }, {
                     "inputGene": "yellow",
                     "inputMarker" : "NatMX",
                     "inputPromoter" : null,
-                    "output": "yellow/blue",
+                    "output": "/SVGs/Art/Smear1BlueYellow.svg",
                     "isCorrect": false
                 }, {
                     "inputGene": "red",
                     "inputMarker" : ["KanMX", "BleoMX"],
                     "inputPromoter" : null,
-                    "output": "red",
+                    "output": "/SVGs/Art/Smear1Red.svg",
                     "isCorrect": false
                 }, {
                     "inputGene": "red",
                     "inputMarker" : "NatMX",
                     "inputPromoter" : null,
-                    "output": "red/blue",
+                    "output": "/SVGs/Art/Smear1BlueRed.svg",
                     "isCorrect": false
                 }, {
                     "inputGene": "blue",

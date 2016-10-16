@@ -149,21 +149,21 @@
         "cases": [
             {
                 "inputGene": "red",
-                "inputMarker": null,
+                "inputMarker": [],
                 "inputPromoter": null,
                 "output": "/SVGs/Art/Smear1RedWild.svg",
                 "isCorrect": false
             },
             {
                 "inputGene": "yellow",
-                "inputMarker": null,
+                "inputMarker": [],
                 "inputPromoter": null,
                 "output": "yellow/wild",
                 "isCorrect": false
             },
             {
                 "inputGene": "blue",
-                "inputMarker": null,
+                "inputMarker": [],
                 "inputPromoter": null,
                 "output": "blue/wild",
                 "isCorrect": false

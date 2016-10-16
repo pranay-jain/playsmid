@@ -48,7 +48,7 @@ h1
 	margin: auto;
 	text-align: center;
 	cursor: pointer;
-	font-weight: 800;
+	font-weight: 500;
 	//text-decoration:underline;
 }
 
@@ -288,10 +288,13 @@ h2
 p
 {
 	font-family: 'Raleway', sans-serif;
-	color: #aaa;
-	font-size: 0.6em;
-	font-weight: 800;
+	color: #999;
+	font-size: 0.7em;
+	line-height: 1.5;
+	font-weight: 400;
 	font-kerning: auto;
+	width: 90%;
+	margin: auto;
 }
 
 button 

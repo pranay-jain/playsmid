@@ -89,10 +89,14 @@ $(document).ready(function () {
 
 		}
 	});
+
+	$('#next').click(function (){
+		if (correct) {
+			window.location.replace("/play/" + parseInt(level.level+1));
+		} else {
+			alert("complete this level first!");
+		}
+	});
 });
 
-$('#next').click(function (){
-	//if (correct) {
-		window.location.replace("/play/" + parseInt(level.level+1));
-	//}
-});
+

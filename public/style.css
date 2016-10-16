@@ -393,14 +393,14 @@ button:focus
 {
 	position: absolute;
 	left: 801px;
-	top: 113px;
+	top: 127px;
 }
 
 .leftSlot
 {
 	position: absolute;
-	left: 648px;
-	top: 113px;
+	left: 644px;
+	top: 127px;
 }
 
 .bottomPromoSlot
@@ -420,13 +420,13 @@ button:focus
 .rightPromoSlot
 {
 	position: absolute;
-	left: 819px;
-	top: 113px;
+	left: 801px;
+	top: 111px;
 }
 
 .leftPromoSlot
 {
 	position: absolute;
-	left: 630px;
-	top: 126px;
+	left: 644px;
+	top: 110px;
 }

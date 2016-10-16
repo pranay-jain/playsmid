@@ -1,5 +1,6 @@
 {
   "name": "playsmid",
+  "config" : { "port" : "8080" },
   "version": "1.0.1",
   "description": "A puzzle-based Synthetic-biology simulator",
   "contributors": [

@@ -5,6 +5,20 @@ var express = require('express'),
 	assert = require('assert');
 
 
+app.use(express.static(__dirname + "/public"));
+app.set('views', './views');
+//app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'hbs');
+
+app.disable('etag');
+
+app.get('/', (req, res) => {
+	res.render('index');
+});
+
+
+
+
 var dbuser = "main",
 	dbpass = "rouse";
 
@@ -12,8 +26,6 @@ var dburl = "mongodb://" + dbuser + ":" + dbpass + "@ds059306.mlab.com:59306/pla
 
 MongoClient.connect(dburl);
 
-app.get('/', (req, res) => {
-	res.send("Hello world");
-});
+
 
 app.listen(8080);

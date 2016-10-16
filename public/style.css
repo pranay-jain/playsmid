@@ -137,7 +137,7 @@ footer
 .tools 
 {
 	border-radius: 15px;
-	width: 300px;
+	width: 900px;
 	height: 150px;
 	background: none;
 	position: relative;
@@ -149,18 +149,26 @@ footer
 {
 	border-radius: 5px;
 	width: 50px;
-	height: 50px;
+	height: 30px;
 	position: relative;
 	left: 2%;
 	background: none;
 	//border: 3px solid #73AD21;
 	display: inline-block;
-	padding-left: 5px;
+	cursor: pointer;
+	padding-left: 0px;
+	padding-right: 20px;
+}
+
+.promoTool img
+{
+	width: 50px;
 }
 
 .promoTool p
 {
 	color: #1a1a1a;
+	cursor: pointer;
 }
 
 .geneTool 
@@ -168,14 +176,15 @@ footer
 	padding: 5px;
 	//margin-bottom: 10px;
 	//margin-right: 5px;
-	height: 50px;
-	width: 50px;
+	width: 75px;
+	height: 30px;
 	position: relative;
 	left: 2%;
 	background: #1abc9c;
 	//border: 3px solid #73AD21;
 	display: inline-block;
-	padding-left: 5px;
+	padding-left: 0px;
+	padding-right: 20px;
 	color: #fff;
 	text-align: center;
 	cursor: pointer;
@@ -186,17 +195,34 @@ footer
 	color: #fff;
 	height: 100%;
 	width: 100%;
+	cursor: pointer;
 }
 
 .markerTool
 {
-	
-	background: #1a1a1a;
+	padding: 5px;
+	//margin-bottom: 10px;
+	//margin-right: 5px;
+	width: 75px;
+	height: 30px;
 	position: relative;
-	left: 2%;
+	left: 4%;
+	background: #1a1a1a;
+	//border: 3px solid #73AD21;
 	display: inline-block;
-	margin-right: 10px;
-	box-sizing: border-box;
+	padding-left: 0px;
+	padding-right: 20px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+
+.markerTool p
+{
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
 }
 
 h2 
@@ -220,14 +246,30 @@ p
 
 button 
 {
-	height: 200px;
-	width: 200px;
+	top:20px;
+	height: 30px;
+	width: 70px;
 	background: #111;
-/*	position: relative;
-	left: 20%;
-	top: -20%;*/
+	position: relative;
+	display: inline-block;
+	position: relative;
+	left: 4%;
+	padding-left: 0px;
+	padding-right: 10px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+>>>>>>> 67d5036c110aedf5206e95c5790c8944d625530b
 }
 
+button p
+{
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
 
 
 

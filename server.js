@@ -18,16 +18,22 @@ var dburl = "mongodb://" + dbuser + ":" + dbpass + "@ds059306.mlab.com:59306/pla
 
 MongoClient.connect(dburl);
 
-var db = MongoClient.db("playsmid");
+var db = MongoClient.connection;
 
 app.get('/', (req, res) => {
 	res.render('index');
 });
 
 app.get('/play', (req, res) => {
-	var cursor = db.collection('data').find({'level':0});
-	var level = cursor[0];
-	res.render('play');
+	var cursor = db.collection('data').find({'level': 0});
+	var level;
+	cursor.toArray(function(err, items) {
+		console.log(items);
+		//level = items;
+		res.render('play', {'level': items, 'string': "hello world"});
+	});
+	//console.log(level);
+	
 });
 
 app.listen(8080);

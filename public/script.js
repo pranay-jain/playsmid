@@ -3,7 +3,7 @@ $(document).ready(function () {
 	var genes = [];
 	var promoters = [];
 
-	$('.geneTool').click(function () {
+	$('.geneTool, .markerTool').click(function () {
 		$(this).css("opacity", 0.7);
 	});
 
@@ -45,7 +45,8 @@ $(document).ready(function () {
 				if(genes[0] == level.cases[i].input) { // && marker == cases[i].inputMarker
 					if(level.cases[i].isCorrect) {
 						console.log("Correct!");
-						break;
+						alert("That's the correct answer!");
+						window.location.replace("/play/" + parseInt(level.level+1));
 					}
 				}
 			}

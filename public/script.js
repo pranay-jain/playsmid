@@ -40,7 +40,7 @@ $(document).ready(function () {
 	});
 
 	$('button').click(function () {
-		if (level.level < 5) {
+		if (level.level < 1) {
 			for (var i = level.cases.length - 1; i >= 0; i--) {
 				if(genes[0] == level.cases[i].input) { // && marker == cases[i].inputMarker
 					if(level.cases[i].isCorrect) {
@@ -50,6 +50,11 @@ $(document).ready(function () {
 					}
 				}
 			}
+		} else if (level.level < 3) {
+
+		} else if (level.level < 5) {
+			// Logic for Puzzles 3 and 4
+
 		} else if (level.level < 6) {
 			// Lead Inducible Gene Puzzle (ensure that this logic is encoded in the db)
 

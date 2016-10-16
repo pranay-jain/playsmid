@@ -276,7 +276,7 @@
                     "isCorrect": true
                 }, {
                     "inputGene": "yellow",
-                    "inputMarker" : "NatMX",
+                    "inputMarker" : ["NatMX"],
                     "inputPromoter" : null,
                     "output": "yellow/blue",
                     "isCorrect": false
@@ -288,7 +288,7 @@
                     "isCorrect": false
                 }, {
                     "inputGene": "red",
-                    "inputMarker" : "NatMX",
+                    "inputMarker" : ["NatMX"],
                     "inputPromoter" : null,
                     "output": "red/blue",
                     "isCorrect": false

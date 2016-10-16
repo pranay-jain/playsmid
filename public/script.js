@@ -25,32 +25,17 @@ $(document).ready(function () {
 	});
 
 	$('button').click(function () {
-		for (var i = level.length - 1; i >= 0; i--) {
-			if(gene == level[i].input) { // && marker == cases[i].inputMarker
-				if(casesZero[i].isCorrect) {
-					console.log("Correct!");
-					break;
+		if (level.level < 3) {
+			for (var i = level.cases.length - 1; i >= 0; i--) {
+				if(gene == level.cases[i].input) { // && marker == cases[i].inputMarker
+					if(level.cases[i].isCorrect) {
+						console.log("Correct!");
+						break;
+					}
 				}
 			}
 		}
 	});
-
-	var casesZero = [
-			{
-				"input": "red", //change to inputGene? or just gene? and Add inputMarker variable to check
-				"output": "red/wild",
-				"isCorrect": true
-			},
-			{
-				"input": "yellow",
-				"output": "yellow/wild",
-				"isCorrect": false
-			},
-			{
-				"input": "blue",
-				"output": "blue/wild",
-				"isCorrect": false
-			}];
 
 	var casesOne = [
 

@@ -7,9 +7,8 @@ $(document).ready(function () {
 
 
 	$('.geneTool p').click(function () {
-		marker = $(this).html();
-		console.log(marker);
-	});
+		marker = $(this).html(); //shouldn't this be gene = ? mixed up
+		console.log(marker); 
 
 	$('.promoTool p').click(function () {
 		promoter = $(this).html();
@@ -17,14 +16,14 @@ $(document).ready(function () {
 	});
 
 	$('.markerTool p').click(function () {
-		gene = $(this).html();
+		gene = $(this).html(); //should be marker?
 		console.log(gene);
 		
 	});
 
 	$('button').click(function () {
 		for (var i = cases.length - 1; i >= 0; i--) {
-			if(gene == cases[i].input) {
+			if(gene == cases[i].input) { // && marker == cases[i].inputMarker
 				if(cases[i].isCorrect) {
 					console.log("Correct!");
 				}
@@ -34,7 +33,7 @@ $(document).ready(function () {
 
 	var cases = [
 			{
-				"input": "red",
+				"input": "red", //change to inputGene? or just gene? and Add inputMarker variable to check
 				"output": "red/wild",
 				"isCorrect": true
 			},

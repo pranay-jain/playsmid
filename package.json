@@ -36,7 +36,8 @@
   ],
   "dependencies": {
     "express": "^4.2.0",
-    "mongodb": "^2.2.10"
+    "mongodb": "^2.2.10",
+    "mongoose": "^4.6.3"
   },
   "private": false
 }

@@ -57,37 +57,4 @@ $(document).ready(function () {
 
 		}
 	});
-
-    var casesTwo = [
-            {
-                "inputGene": "yellow",
-                "inputMarker" : ["KanMX", "BleoMX"],
-                "inputPromoter" : null,
-                "output": "yellow",
-                "isCorrect": true
-            }, {
-                "inputGene": "yellow",
-                "inputMarker" : "NatMX",
-                "inputPromoter" : null,
-                "output": "yellow/blue",
-                "isCorrect": false
-            }, {
-                "inputGene": "red",
-                "inputMarker" : ["KanMX", "BleoMX"],
-                "inputPromoter" : null,
-                "output": "red",
-                "isCorrect": false
-            }, {
-                "inputGene": "red",
-                "inputMarker" : "NatMX",
-                "inputPromoter" : null,
-                "output": "red/blue",
-                "isCorrect": false
-            }, {
-                "inputGene": "blue",
-                "inputMarker" : ["KanMX", "BleoMX", "NatMX"],
-                "inputPromoter" : null,
-                "output": "blue",
-                "isCorrect": false
-        }];
 });

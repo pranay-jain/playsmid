@@ -1,0 +1,42 @@
+{
+  "name": "playsmid",
+  "version": "1.0.1",
+  "description": "A puzzle-based Synthetic-biology simulator",
+  "contributors": [
+    {
+      "name": "Pranay Jain"
+    },
+    {
+      "name": "Riley Stockard"
+    },
+    {
+      "name": "NingXin (Linda) Zhu"
+    },
+    {
+      "name": "Jonathan Leang"
+    },
+    {
+      "name": "Akshay Chalana"
+    }
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodejitsu/browsenpm.org"
+  },
+  "bugs": {
+    "url": "https://github.com/nodejitsu/browsenpm.org/issues"
+  },
+  "keywords": [
+    "synthetic-biology",
+    "biology",
+    "simulator"
+  ],
+  "dependencies": {
+    "express": "^4.2.0",
+    "mongodb": "^2.2.10"
+  },
+  "private": false
+}

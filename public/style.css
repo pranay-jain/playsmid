@@ -308,6 +308,10 @@ button p
 	cursor: pointer;
 }
 
-
-
+.smear
+{
+	position: absolute;
+	left: 123px;
+	top: 210px;
+}
 

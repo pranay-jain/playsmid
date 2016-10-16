@@ -66,7 +66,7 @@
         "cases": [
             {
                 "input": "red",
-                "output": "red/wild",
+                "output": "/SVGs/Art/Smear1RedWild.svg",
                 "isCorrect": true
             },
             {
@@ -151,7 +151,7 @@
                 "inputGene": "red",
                 "inputMarker": null,
                 "inputPromoter": null,
-                "output": "red/wild",
+                "output": "/SVGs/Art/Smear1RedWild.svg",
                 "isCorrect": false
             },
             {

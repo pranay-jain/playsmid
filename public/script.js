@@ -2,7 +2,7 @@ $(document).ready(function () {
 	var markers = [];
 	var genes = [];
 	var promoters = [];
-	var correct;
+	var correct = false;
 	var plasmidEntries = [];
 
 	$('.geneTool, .markerTool').click(function () {
@@ -25,7 +25,7 @@ $(document).ready(function () {
 			plasmidEntries.push(marker);
 		}
 		attachImage();
-		
+
 	});
 
 	$('.promoTool p').click(function () {
@@ -134,7 +134,19 @@ $(document).ready(function () {
 			}
 		} else if (level.level < 6) {
 			// Lead Inducible Gene Puzzle (ensure that this logic is encoded in the db)
-
+			if (genes.length > 1 && promoters.length > 1) {
+				if (genes[0] !== genes[1]) {
+					if (['lead', 'none'].indexOf(promoters[0]) > -1) {
+						if (promoters[1] === 'sugar') {
+							correct = true;
+						}
+					} else {
+						if (['lead', 'none'].indexOf(promoters[1]) > -1) {
+							correct = true;
+						}
+					}
+				}
+			}
 		} else {
 			// Logic for Puzzle 6
 		}

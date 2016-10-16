@@ -404,5 +404,66 @@
             "isCorrect": false
         }],
         "instructions": "We can control the level of color we make by regulating the gene with a promoter. Strong promoters make a lot of color. Weak promoters make color that takes longer to build up. Promoters can also be controlled to activate (inducible) or repress (repressible) the gene based on a signal molecule. These yeast are fed sugar to grow, so an inducible by sugar, strong, promoter will make a lot of color constantly. Make yeast that will start as red and slowly turn purple."
+    }, {
+        "level": 5,
+        "cellName": "Yeast",
+        "initialColor": "white",
+        "successText": "That's the correct answer!",
+        "failureText": "That's not the correct answer.",
+        "markers": [
+            {
+                "name": "KanMX"
+            },
+            {
+                "name": "BleoMX"
+            },
+            {
+                "name": "NatMX"
+            }
+        ],
+        "genes": [
+            {
+                "gene": "red",
+                "isOn": 0
+            },
+            {
+                "gene": "blue",
+                "isOn": 0
+            },
+            {
+                "gene": "yellow",
+                "isOn": 0
+            }
+        ],
+        "promoters": [
+            {
+                "induced": false,
+                "fast": true
+            },
+            {
+                "induced": false,
+                "fast": false
+            },
+            {
+                "induced": true,
+                "fast": true
+            },
+            {
+                "induced": true,
+                "fast": false
+            }
+        ],
+        "molecules": [
+            {
+                "name": "lead"
+            },
+            {
+                "name": "sugar"
+            },
+            {
+                "name": "none"
+            }
+        ],
+        "instructions": "Although we managed to detect lead, the promoter that senses lead is not strong enough to produce much color output when the concentration of lead is low. There must be some way to amplify the color output. Hint: You now have access to a new slot and gene! You need a way to increase the concentration of a molecule that will activate the red gene."
     }
 ]

@@ -7,7 +7,6 @@ var express = require('express'),
 
 app.use(express.static(__dirname + "/public"));
 app.set('views', './views');
-//app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'hbs');
 
 app.disable('etag');

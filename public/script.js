@@ -3,11 +3,13 @@ $(document).ready(function () {
 	var genes = [];
 	var promoters = [];
 	var correct;
+	var plasmidEntries = [];
 
 	$('.geneTool, .markerTool').click(function () {
 		$(this).css("opacity", 0.7);
 	});
 
+	// Plasmid image reposition
 
 	$('.geneTool p').click(function () {
 		var marker = $(this).html(); //shouldn't this be gene = ? mixed up
@@ -16,7 +18,9 @@ $(document).ready(function () {
 		} else {
 			markers.push(marker);
 		}
-		//console.log(marker);
+
+		plasmidEntries.push(marker);
+		
 	});
 
 	$('.promoTool p').click(function () {
@@ -26,6 +30,7 @@ $(document).ready(function () {
 		} else {
 			promoters.push(promoter);
 		}
+		plasmidEntries.push(marker);
 		//console.log(promoter);
 	});
 
@@ -36,6 +41,7 @@ $(document).ready(function () {
 		} else {
 			genes.push(gene);
 		}
+		plasmidEntries.push(marker);
 		//console.log(gene);
 
 	});
@@ -81,12 +87,38 @@ $(document).ready(function () {
 			}
 		} else if (level.level < 5) {
 			// Logic for Puzzles 3 and 4
-
+			var gene = genes[0];
+			var marker;
+			if (markers.length === 0) {
+				marker = null;
+			} else {
+				marker = markers[0];
+			}
+			var promoter;
+			if (promoters.length === 0) {
+				promoter = null;
+			} else {
+				promoter = promoters[0];
+			}
+			var firstCorrect = false;
+			for (var i = level.cases.length - 1; i >= 0; i--) {
+				var currCase = level.cases[i];
+				if(gene === currCase.inputGene && currCase.inputMarker.indexOf(markers[0])
+				> -1 && currCase.inputPromoter === promoter) {
+					if(level.cases[i].isCorrect) {
+						if (firstCorrect) {
+							correct = true;
+						} else {
+							firstCorrect = true;
+						}
+					}
+				}
+			}
 		} else if (level.level < 6) {
 			// Lead Inducible Gene Puzzle (ensure that this logic is encoded in the db)
 
 		} else {
-
+			// Logic for Puzzle 6
 		}
 		if (!correct) {
 			alert(level.failureText);
@@ -100,4 +132,32 @@ $(document).ready(function () {
 			alert("complete this level first!");
 		}
 	});
+
+
+
+	// Place plasmid images
+
+	var imgsrc = {
+		"red": "",
+		"blue": "",
+		"yellow": "",
+		"KanMX": "",
+		"BleoMX": "",
+		"NatMX": ""
+	};
+
+
+
+	for (var i = plasmidEntries.length - 1; i >= 0; i--) {
+		if (i%4===0)
+			$('.bottomSlot').attr("src", plasmidEntries[i]);
+		else if (i%4===1)
+			$('.topSlot').attr("src", plasmidEntries[i]);
+		else if (i%4===2)
+			$('.leftSlot').attr("src", plasmidEntries[i]);
+		else
+			$('.rightSlot').attr("src", plasmidEntries[i]);
+	}
+
+
 });

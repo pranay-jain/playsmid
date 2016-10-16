@@ -4,7 +4,7 @@
         "cellName": "Yeast",
         "initialColor": "white",
         "successText": "That's the correct answer!",
-        "failureText": "Drag and drop the box that says “red” to the empty slot on the plasmid.",
+        "failureText": "Click the box that says “red” to the empty slot on the plasmid.",
         "markers": [
             {
                 "name": "KanMX"
@@ -306,5 +306,103 @@
                     "isCorrect": false
             }],
         "instructions": "What if you start with yeast that has already been transformed once? Let’s change this blue yeast into yellow. The plasmid that was integrated previously had the blue gene and the NatMX marker. In addition, the slot for the gene there always integrates into the same place of the yeast DNA. That means any gene put in that spot will replace the gene that was there before. "
+    }, {
+        "level": 3,
+        "cellName": "Yeast",
+        "initialColor": "white",
+        "successText": "That's the correct answer!",
+        "failureText": "This puzzle depends on making colors that build up at different speeds and mix.",
+        "markers": [
+            {
+                "name": "KanMX"
+            },
+            {
+                "name": "BleoMX"
+            },
+            {
+                "name": "NatMX"
+            }
+        ],
+        "genes": [
+            {
+                "gene": "red",
+                "isOn": 0
+            },
+            {
+                "gene": "blue",
+                "isOn": 0
+            },
+            {
+                "gene": "yellow",
+                "isOn": 0
+            }
+        ],
+        "promoters": [
+            {
+                "induced": false,
+                "fast": true
+            },
+            {
+                "induced": false,
+                "fast": false
+            },
+            {
+                "induced": true,
+                "fast": true
+            },
+            {
+                "induced": true,
+                "fast": false
+            }
+        ],
+        "molecules": [
+            {
+                "name": "lead"
+            },
+            {
+                "name": "sugar"
+            },
+            {
+                "name": "red"
+            },
+            {
+                "name": "yellow"
+            },
+            {
+                "name": "blue"
+            }
+        ],
+        "cases": [{
+            "inputGene": "red",
+            "inputMarker" : ["KanMX", "BleoMX", "NatMX"],
+            "inputPromoter" : "strong",
+            "output": "red",
+            "isCorrect": true
+        }, {
+            "inputGene": "blue",
+            "inputMarker" : ["KanMX", "BleoMX", "NatMX"],
+            "inputPromoter" : "weak",
+            "output": "blue",
+            "isCorrect": true
+        }, {
+            "inputGene": "yellow",
+            "inputMarker" : ["KanMX", "BleoMX", "NatMX"],
+            "inputPromoter" : ["weak", "strong"],
+            "output": "yellow",
+            "isCorrect": false
+        }, {
+            "inputGene": "red",
+            "inputMarker" : ["KanMX", "BleoMX", "NatMX"],
+            "inputPromoter" : "weaks",
+            "output": "red",
+            "isCorrect": false
+        }, {
+            "inputGene": "blue",
+            "inputMarker" : ["KanMX", "BleoMX", "NatMX"],
+            "inputPromoter" : "strong",
+            "output": "blue",
+            "isCorrect": false
+        }],
+        "instructions": "We can control the level of color we make by regulating the gene with a promoter. Strong promoters make a lot of color. Weak promoters make color that takes longer to build up. Promoters can also be controlled to activate (inducible) or repress (repressible) the gene based on a signal molecule. These yeast are fed sugar to grow, so an inducible by sugar, strong, promoter will make a lot of color constantly. Make yeast that will start as red and slowly turn purple."
     }
 ]

@@ -4,6 +4,7 @@
 		<link 	rel="stylesheet" type="text/css" href="style.css">
 		<link 	href="https://fonts.googleapis.com/css?family=Raleway:400,700,800" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+		<script type="text/javascript" src="/script.js"></script>
 	</head>
 	<body>
 
@@ -19,50 +20,54 @@
 		<footer>
 			<div class="tools">
 				<h2>TOOLS</h2>
+
 				<div>
 					<div class="promoTool">
-						<p>
-							A
+						<p>{{level.molecules.0.name}}
 							<img src="/SVGs/Items and Slots/InputPromoterHorizontal.svg">
 						</p>
 					</div>
 					<div class="promoTool">
 						<p>
-							<font color=#1a1a1a>
-A
+							{{level.molecules.1.name}}
 							<img src="/SVGs/Items and Slots/InputPromoterHorizontal.svg">
 						</p>
 					</div>
 					<div class="promoTool">
-						<p>
-							A
+						<p>{{level.molecules.2.name}}
 							<img src="/SVGs/Items and Slots/InputPromoterHorizontal.svg">
 						</p>
 					</div>
 				</div>
+
 				<div>
 					<div class="geneTool">
-						<p>GENE</p>
+						<p>{{level.markers.0.name}}</p>
 					</div>
 					<div class="geneTool">
-						<p>GENE</p>
+						<p>{{level.markers.1.name}}</p>
 					</div>
 					<div class="geneTool">
-						<p>GENE</p>
+						<p>{{level.markers.2.name}}</p>
 					</div>
 				</div>
+
 				<div>
 					<div class="markerTool">
-						<p>M</p>
+						<p>{{level.genes.0.gene}}</p>
 					</div>
 					<div class="markerTool">
-						<p>M</p>
+						<p>{{level.genes.1.gene}}</p>
 					</div>
 					<div class="markerTool">
-						<p>M</p>
+						<p>{{level.genes.2.gene}}</p>
 					</div>
 				<div>
+
 			</div>
+
+			<button>Submit</button>
 		</footer>
+
 	</body>
 </html>

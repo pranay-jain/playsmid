@@ -1,4 +1,5 @@
 {
+	"level": 0,
 	"cellName": "Yeast",
 	"initialColor": "white",
 	"markers": [
@@ -60,5 +61,29 @@
 		{
 			"name": "blue"
 		}
+	],
+	"cases": [
+		{
+			"input": "red",
+			"output": "red/wild",
+			"isCorrect": true
+		},
+		{
+			"input": "yellow",
+			"output": "yellow/wild",
+			"isCorrect": false
+		},
+		{
+			"input": "blue",
+			"output": "blue/wild",
+			"isCorrect": false
+		}
 	]
 }
+
+
+
+
+
+
+

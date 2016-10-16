@@ -268,61 +268,37 @@
             }
         ],
         "cases": [
-            {
-                "inputGene": "red",
-                "inputMarker": null,
-                "inputPromoter": null,
-                "output": "red/wild",
-                "isCorrect": false
-            },
-            {
-                "inputGene": "yellow",
-                "inputMarker": null,
-                "inputPromoter": null,
-                "output": "yellow/wild",
-                "isCorrect": false
-            },
-            {
-                "inputGene": "blue",
-                "inputMarker": null,
-                "inputPromoter": null,
-                "output": "blue/wild",
-                "isCorrect": false
-            },
-            {
-                "inputGene": "blue",
-                "inputMarker": [
-                    "KanMX",
-                    "NatMX",
-                    "BleoMX"
-                ],
-                "inputPromoter": null,
-                "output": "blue",
-                "isCorrect": false
-            },
-            {
-                "inputGene": "red",
-                "inputMarker": [
-                    "KanMX",
-                    "NatMX",
-                    "BleoMX"
-                ],
-                "inputPromoter": null,
-                "output": "red",
-                "isCorrect": true
-            },
-            {
-                "inputGene": "yellow",
-                "inputMarker": [
-                    "KanMX",
-                    "NatMX",
-                    "BleoMX"
-                ],
-                "inputPromoter": null,
-                "output": "yellow",
-                "isCorrect": false
-            }
-        ],
-        "instructions": "What happened?? You can see that the yeast turned a splotchy mix of tan and red. This is because transformation is NOT 100% successful. To get a plate of pure red yeast, you need a method of selection. Markers were just added to your toolbox (KanMX, NatMX, BleoMX). These three markers confer resistant to three different antibiotics (chemicals that kill cells). For example, yeast with the KanMX gene will be able to survive even if their plate had the deadly kanamycin in it. If you put a marker in your plasmid with your gene, then only the cells that were transformed will be able to survive if you put its respective antibiotic on the plate. Try putting a marker on your plasmid with the red gene. "
+                {
+                    "inputGene": "yellow",
+                    "inputMarker" : ["KanMX", "BleoMX"],
+                    "inputPromoter" : null,
+                    "output": "yellow",
+                    "isCorrect": true
+                }, {
+                    "inputGene": "yellow",
+                    "inputMarker" : "NatMX",
+                    "inputPromoter" : null,
+                    "output": "yellow/blue",
+                    "isCorrect": false
+                }, {
+                    "inputGene": "red",
+                    "inputMarker" : ["KanMX", "BleoMX"],
+                    "inputPromoter" : null,
+                    "output": "red",
+                    "isCorrect": false
+                }, {
+                    "inputGene": "red",
+                    "inputMarker" : "NatMX",
+                    "inputPromoter" : null,
+                    "output": "red/blue",
+                    "isCorrect": false
+                }, {
+                    "inputGene": "blue",
+                    "inputMarker" : ["KanMX", "BleoMX", "NatMX"],
+                    "inputPromoter" : null,
+                    "output": "blue",
+                    "isCorrect": false
+            }],
+        "instructions": "What if you start with yeast that has already been transformed once? Let’s change this blue yeast into yellow. The plasmid that was integrated previously had the blue gene and the NatMX marker. In addition, the slot for the gene there always integrates into the same place of the yeast DNA. That means any gene put in that spot will replace the gene that was there before. "
     }
 ]

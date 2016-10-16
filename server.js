@@ -4,7 +4,6 @@ var express = require('express'),
 	MongoClient = require('mongoose'),
 	assert = require('assert');
 
-
 app.use(express.static(__dirname + "/public"));
 app.set('views', './views');
 app.set('view engine', 'hbs');
@@ -27,6 +26,17 @@ app.get('/', (req, res) => {
 app.get('/play', (req, res) => {
 	var cursor = db.collection('data').find({'level': 0});
 	var level;
+	cursor.toArray(function(err, items) {
+		console.log(items[0]);
+		res.render('play', {'level': items[0], 'string': "hello world"});
+	});
+	
+});
+
+app.get('/play/:lvl', (req, res) => {
+	var level = parseInt(req.params.lvl);
+	console.log(level);
+	var cursor = db.collection('data').find({'level': 0});
 	cursor.toArray(function(err, items) {
 		console.log(items[0]);
 		res.render('play', {'level': items[0], 'string': "hello world"});

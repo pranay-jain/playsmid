@@ -3,6 +3,8 @@
         "level": 0,
         "cellName": "Yeast",
         "initialColor": "white",
+        "successText": "That's the correct answer!",
+        "failureText": "Drag and drop the box that says “red” to the empty slot on the plasmid.",
         "markers": [
             {
                 "name": "KanMX"
@@ -86,6 +88,8 @@
         "level": 1,
         "cellName": "Yeast",
         "initialColor": "white",
+        "successText": "Eureka! Only the cells that took the plasmid with the red gene and the marker were able to survive and grow.",
+        "failureText": "Try putting a marker on your plasmid with the red gene.",
         "markers": [
             {
                 "name": "KanMX"
@@ -207,6 +211,8 @@
         "level": 2,
         "cellName": "Yeast",
         "initialColor": "white",
+        "successText": "Great! You need to use a new marker because otherwise you get a mix of red and blue.",
+        "failureText": "Will the newly transformed cells be given any new advantage so they will be selected for over the blue yeast?",
         "markers": [
             {
                 "name": "KanMX"

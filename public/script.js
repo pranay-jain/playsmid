@@ -19,7 +19,12 @@ $(document).ready(function () {
 			markers.push(marker);
 		}
 
-		plasmidEntries.push(marker);
+		if (plasmidEntries.indexOf(marker) > -1) {
+			plasmidEntries.splice(plasmidEntries.indexOf(marker), 1);
+		} else {
+			plasmidEntries.push(marker);
+		}
+		attachImage();
 		
 	});
 
@@ -30,7 +35,14 @@ $(document).ready(function () {
 		} else {
 			promoters.push(promoter);
 		}
-		plasmidEntries.push(marker);
+
+		if (plasmidEntries.indexOf(promoter) > -1) {
+			plasmidEntries.splice(plasmidEntries.indexOf(promoter), 1);
+		} else {
+			plasmidEntries.push(promoter);
+		}
+
+		attachImage();
 		//console.log(promoter);
 	});
 
@@ -41,8 +53,14 @@ $(document).ready(function () {
 		} else {
 			genes.push(gene);
 		}
-		plasmidEntries.push(marker);
-		//console.log(gene);
+		
+		if (plasmidEntries.indexOf(gene) > -1) {
+			plasmidEntries.splice(plasmidEntries.indexOf(gene), 1);
+		} else {
+			plasmidEntries.push(gene);
+		}
+
+		attachImage();
 
 	});
 
@@ -138,26 +156,37 @@ $(document).ready(function () {
 	// Place plasmid images
 
 	var imgsrc = {
-		"red": "",
-		"blue": "",
-		"yellow": "",
-		"KanMX": "",
-		"BleoMX": "",
-		"NatMX": ""
+		"red": "/SVGs/Items and Slots/InputGeneHorizontalRed.svg",
+		"blue": "/SVGs/Items and Slots/InputGeneHorizontalBlue.svg",
+		"yellow": "/SVGs/Items and Slots/InputGeneHorizontalYellow.svg",
+		"KanMX": "/SVGs/Items and Slots/InputGeneHorizontalKanMX.svg",
+		"BleoMX": "/SVGs/Items and Slots/InputGeneHorizontalBleoMX.svg",
+		"NatMX": "/SVGs/Items and Slots/InputGeneHorizontalNatMX.svg"
 	};
 
+	console.log(plasmidEntries);
 
-
-	for (var i = plasmidEntries.length - 1; i >= 0; i--) {
-		if (i%4===0)
-			$('.bottomSlot').attr("src", plasmidEntries[i]);
-		else if (i%4===1)
-			$('.topSlot').attr("src", plasmidEntries[i]);
-		else if (i%4===2)
-			$('.leftSlot').attr("src", plasmidEntries[i]);
-		else
-			$('.rightSlot').attr("src", plasmidEntries[i]);
+	function attachImage() {
+		for (var i = plasmidEntries.length - 1; i >= 0; i--) {
+			if (i%4===0){
+				$('#bottomSlot').attr("src", imgsrc[plasmidEntries[i]]);
+				console.log(imgsrc[plasmidEntries[i]]);
+			}
+			else if (i%4===1){
+				$('#topSlot').attr("src", imgsrc[plasmidEntries[i]]);
+				console.log(imgsrc[plasmidEntries[i]]);
+			}
+			else if (i%4===2){
+				$('#leftSlot').attr("src", imgsrc[plasmidEntries[i]]);
+				console.log(imgsrc[plasmidEntries[i]]);
+			}
+			else if (i%4===3){
+				$('#rightSlot').attr("src", imgsrc[plasmidEntries[i]]);
+				console.log(imgsrc[plasmidEntries[i]]);
+			}
+		}
 	}
+	
 
 
 });

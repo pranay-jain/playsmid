@@ -1,4 +1,5 @@
-html,body {
+html,body 
+{
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
@@ -23,7 +24,8 @@ h1
 	left: 40%;
 }
 
-#particles-js {
+#particles-js 
+{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -33,6 +35,42 @@ h1
 	background-size: cover;
 	background-position: 50% 50%;
 }
+
+.petri
+{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	left: 5%;
+	top: 50px;
+}
+
+.petri img 
+{
+	height: 100%;
+	width: 100%;
+}
+
+
+.hints 
+{
+	position: absolute;
+	right: 0;
+	height: 500px;
+	width: 300px;
+	background: #fff;
+	box-shadow: -1px 1px 1px 1px #eee;
+}
+
+h3
+{
+	font-family: 'Raleway', sans-serif;
+	color: #aaa;
+	font-weight: 800;
+	font-size: 1em;
+	margin-left: 10%;
+}
+
 
 footer
 {
@@ -55,9 +93,9 @@ footer
 h2 
 {
 	font-family: 'Raleway', sans-serif;
-	color: #ccc;
+	color: #aaa;
 	font-size: 1em;
-
+	font-weight: 800;
 }
 
 

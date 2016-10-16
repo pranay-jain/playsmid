@@ -21,12 +21,12 @@ MongoClient.connect(dburl);
 var db = MongoClient.db("playsmid");
 
 app.get('/', (req, res) => {
-	var cursor = db.collection('data').find({'level':0});
-	var level = cursor[0];
 	res.render('index');
 });
 
 app.get('/play', (req, res) => {
+	var cursor = db.collection('data').find({'level':0});
+	var level = cursor[0];
 	res.render('play');
 });
 

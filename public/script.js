@@ -152,6 +152,7 @@ $(document).ready(function () {
 		}
 		if (!correct) {
 			alert(level.failureText);
+			window.location.replace("/play/" + parseInt(level.level));
 		}
 	});
 

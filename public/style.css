@@ -259,7 +259,6 @@ button
 	color: #fff;
 	text-align: center;
 	cursor: pointer;
->>>>>>> 67d5036c110aedf5206e95c5790c8944d625530b
 }
 
 button p
@@ -271,6 +270,10 @@ button p
 	cursor: pointer;
 }
 
-
-
+.smear
+{
+	position: absolute;
+	left: 123px;
+	top: 210px;
+}
 

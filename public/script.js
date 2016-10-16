@@ -69,8 +69,8 @@ $(document).ready(function () {
 			}
 			for (var i = level.cases.length - 1; i >= 0; i--) {
 				var currCase = level.cases[i];
-				if(gene === currCase.inputGene && (currCase.inputMarker === marker ||
-					currCase.indexOf(markers[0]) > -1) && currCase.inputPromoter === promoter) {
+				if(gene === currCase.inputGene && currCase.inputMarker.indexOf(markers[0])
+				> -1 && currCase.inputPromoter === promoter) {
 					if(level.cases[i].isCorrect) {
 						$('#smear').attr("src", level.cases[i].output);
 						console.log(level.cases[i].output);
@@ -101,5 +101,3 @@ $(document).ready(function () {
 		}
 	});
 });
-
-

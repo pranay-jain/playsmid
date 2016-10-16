@@ -11,19 +11,22 @@ canvas
 
 h1
 {
-	font-family: 'Merriweather', serif;
+	font-family: 'Bungee Inline', cursive;
 	font-kerning: auto;
-	font-size: 2em;
+	font-size: 3em;
 	text-align: center;
 	color: #fff;
 	//text-transform: uppercase;
+	position: absolute;
+	top: 30%;
+	left: 40%;
 }
 
 #particles-js {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #222;
+	background-color: #1a1a1a;
 	background-image: url("");
 	background-repeat: no-repeat;
 	background-size: cover;

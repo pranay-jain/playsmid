@@ -1,0 +1,5 @@
+# remove node_modules
+node_modules
+
+# remove debug_log
+npm-debug 

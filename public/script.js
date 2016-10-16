@@ -81,12 +81,38 @@ $(document).ready(function () {
 			}
 		} else if (level.level < 5) {
 			// Logic for Puzzles 3 and 4
-
+			var gene = genes[0];
+			var marker;
+			if (markers.length === 0) {
+				marker = null;
+			} else {
+				marker = markers[0];
+			}
+			var promoter;
+			if (promoters.length === 0) {
+				promoter = null;
+			} else {
+				promoter = promoters[0];
+			}
+			var firstCorrect = false;
+			for (var i = level.cases.length - 1; i >= 0; i--) {
+				var currCase = level.cases[i];
+				if(gene === currCase.inputGene && currCase.inputMarker.indexOf(markers[0])
+				> -1 && currCase.inputPromoter === promoter) {
+					if(level.cases[i].isCorrect) {
+						if (firstCorrect) {
+							correct = true;
+						} else {
+							firstCorrect = true;
+						}
+					}
+				}
+			}
 		} else if (level.level < 6) {
 			// Lead Inducible Gene Puzzle (ensure that this logic is encoded in the db)
 
 		} else {
-
+			// Logic for Puzzle 6
 		}
 		if (!correct) {
 			alert(level.failureText);

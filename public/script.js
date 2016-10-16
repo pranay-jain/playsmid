@@ -2,7 +2,7 @@ $(document).ready(function () {
 	var markers = [];
 	var genes = [];
 	var promoters = [];
-	var correct = false;
+	var correct;
 
 	$('.geneTool, .markerTool').click(function () {
 		$(this).css("opacity", 0.7);
@@ -40,7 +40,8 @@ $(document).ready(function () {
 
 	});
 
-	$('button').click(function () {
+
+	$('#transform').click(function () {
 		if (level.level < 1) {
 			for (var i = level.cases.length - 1; i >= 0; i--) {
 				if(genes[0] == level.cases[i].input) {
@@ -73,7 +74,7 @@ $(document).ready(function () {
 					if(level.cases[i].isCorrect) {
 						$('#smear').attr("src", level.cases[i].output);
 						console.log(level.cases[i].output);
-						alert("That's the correct answer!");
+						alert(level.successText);
 						correct = true;
 					}
 				}
@@ -90,6 +91,9 @@ $(document).ready(function () {
 	});
 });
 
-// if (correct) {
-// 	window.setTimeout(window.location.replace("/play/" + parseInt(level.level+1)), 200);
-// }
+$('#next').click(function (){
+	//if (correct) {
+		window.location.replace("/play/" + parseInt(level.level+1));
+	//}
+});
+

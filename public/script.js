@@ -53,7 +53,7 @@ $(document).ready(function () {
 		} else {
 			genes.push(gene);
 		}
-		
+
 		if (plasmidEntries.indexOf(gene) > -1) {
 			plasmidEntries.splice(plasmidEntries.indexOf(gene), 1);
 		} else {
@@ -72,7 +72,7 @@ $(document).ready(function () {
 					if(level.cases[i].isCorrect) {
 						$('#smear').attr("src", level.cases[i].output);
 						console.log(level.cases[i].output);
-						alert(level.successText);
+						alert(level.successText.replace(/&#x27;/g, "'"));
 						correct = true;
 					}
 				}
@@ -199,7 +199,7 @@ $(document).ready(function () {
 			}
 		}
 	}
-	
+
 
 
 });
